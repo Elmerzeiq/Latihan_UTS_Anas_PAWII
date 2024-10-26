@@ -11,7 +11,7 @@ const produkIndex = async (req, res) => {
 
 const produkInsert = async (req, res) => {
     try {
-        const { nama, deskripsi, harga, stok  } = req.body;
+        const { nama, deskripsi, harga, stok, kategori_id } = req.body;
 
         // Validasi data jika diperlukan (contoh: kategori_id harus diisi)
         
@@ -20,7 +20,8 @@ const produkInsert = async (req, res) => {
             nama,
             deskripsi,
             harga,
-            stok
+            stok,
+            kategori_id
             
         });
 
